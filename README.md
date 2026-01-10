@@ -6,14 +6,19 @@ A modern web application with a Vite + React frontend and a minimal Express.js b
 
 ```
 .
-├── frontend/          # Vite + React application
-│   ├── src/          # React components and source files
-│   ├── public/       # Static assets
+├── frontend/              # Vite + React application
+│   ├── src/
+│   │   ├── App.jsx       # Main React component
+│   │   ├── main.jsx      # Entry point
+│   │   ├── assets/       # Images and static assets
+│   │   └── templates/    # HTML landing page templates
+│   ├── public/           # Static public assets
 │   └── package.json
-├── backend/          # Express.js server
-│   ├── server.js     # Main server file
+├── backend/              # Express.js server
+│   ├── server.js        # Main server file
 │   └── package.json
-└── package.json      # Root package.json with convenience scripts
+├── .gitignore           # Git ignore rules
+└── package.json         # Root package.json with scripts
 ```
 
 ## Getting Started
@@ -25,16 +30,18 @@ A modern web application with a Vite + React frontend and a minimal Express.js b
 
 ### Installation
 
-1. Install frontend dependencies:
+Install all dependencies at once from the project root:
 ```bash
-cd frontend
-npm install
+npm run install:all
 ```
 
-2. Install backend dependencies:
+Or install separately:
 ```bash
-cd backend
-npm install
+# Frontend
+cd frontend && npm install
+
+# Backend
+cd backend && npm install
 ```
 
 ## Running the Application
@@ -55,13 +62,15 @@ npm run dev
 ```
 The backend will be available at http://localhost:3001
 
-### Option 2: Run from root (Windows)
+### Option 2: Run both from root (Recommended)
 
 ```bash
 npm run dev
 ```
 
-This will start both servers simultaneously.
+This starts both servers simultaneously using concurrently.
+
+> **Note:** First time? Run `npm install` in the root directory to install `concurrently`.
 
 ## API Endpoints
 
