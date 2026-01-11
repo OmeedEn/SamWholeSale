@@ -185,7 +185,7 @@ export default function About() {
                   <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
                     <div className="flex items-center gap-3 text-slate-500">
                       <span className="material-icons text-sm">location_on</span>
-                      <span className="text-xs">123 Industrial Park, Logistics Ave, TX 75201</span>
+                      <span className="text-xs">17391 Murphy ave unit A15, Irvine, CA 92614</span>
                     </div>
                   </div>
                 </div>
