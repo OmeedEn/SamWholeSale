@@ -14,12 +14,11 @@ export default function Navigation() {
                 <span className="material-icons text-white text-2xl">account_tree</span>
               </div>
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">
-                Wholesale<span className="text-primary text-2xl leading-none">.</span>Pro
+                Summit Wholesale
               </span>
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <Link className="text-sm font-medium hover:text-primary transition-colors" to="/products">Products</Link>
             <Link className="text-sm font-medium hover:text-primary transition-colors" to="/about">About</Link>
             <Link className="text-sm font-medium hover:text-primary transition-colors" to="/about#contact">Contact</Link>
             <button

@@ -11,7 +11,7 @@ export default function Footer() {
                 <span className="material-icons text-white text-xl">account_tree</span>
               </div>
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">
-                Wholesale<span className="text-primary text-xl leading-none">.</span>Pro
+                Summit Wholesale
               </span>
             </Link>
             <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-sm">
@@ -38,7 +38,7 @@ export default function Footer() {
           <div>
             <h5 className="font-bold text-slate-900 dark:text-white mb-6">Solutions</h5>
             <ul className="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
-              <li><Link className="hover:text-primary transition-colors" to="/products">Bulk Supply</Link></li>
+              <li><Link className="hover:text-primary transition-colors" to="/about#contact">Bulk Supply</Link></li>
               <li><a className="hover:text-primary transition-colors" href="#">Custom Manufacturing</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Logistics Support</a></li>
               <li><a className="hover:text-primary transition-colors" href="#">Inventory API</a></li>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
-          <p className="text-slate-400 text-sm">&copy; 2024 Wholesale.Pro Global Inc. All rights reserved.</p>
+          <p className="text-slate-400 text-sm">&copy; 2024 Summit Wholesale. All rights reserved.</p>
         </div>
       </div>
     </footer>

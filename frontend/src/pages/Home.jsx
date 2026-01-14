@@ -25,8 +25,8 @@ export default function Home() {
               Optimize your supply chain with our direct-source advantage. We combine industrial scale with precision logistics to power your business growth.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/products" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
-                View Product Catalog <span className="material-icons">arrow_forward</span>
+              <Link to="/about#contact" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
+                Contact Us <span className="material-icons">arrow_forward</span>
               </Link>
               <Link to="/about#contact" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
                 Request Sample Kit
@@ -61,7 +61,7 @@ export default function Home() {
                 <span className="material-icons text-primary">local_shipping</span>
               </div>
               <h3 className="text-5xl font-extrabold text-slate-900 dark:text-white mb-2">10k+</h3>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">Orders Shipped Monthly</p>
+              <p className="text-slate-500 dark:text-slate-400 font-medium">Products Shipped Monthly</p>
             </div>
             <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 text-center hover:translate-y-[-4px] transition-transform">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -75,7 +75,7 @@ export default function Home() {
                 <span className="material-icons text-primary">public</span>
               </div>
               <h3 className="text-5xl font-extrabold text-slate-900 dark:text-white mb-2">500+</h3>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">Global Partners</p>
+              <p className="text-slate-500 dark:text-slate-400 font-medium">Partners</p>
             </div>
           </div>
         </div>

@@ -1,8 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 export default function About() {
   const location = useLocation()
+  const [formData, setFormData] = useState({
+    companyName: '',
+    email: '',
+    subject: 'Bulk Pricing Inquiry',
+    message: ''
+  })
 
   useEffect(() => {
     if (location.hash) {
@@ -12,6 +18,18 @@ export default function About() {
       }
     }
   }, [location])
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const mailtoLink = `mailto:Summit3pl@yahoo.com?subject=${encodeURIComponent(formData.subject + ' - ' + formData.companyName)}&body=${encodeURIComponent(
+      `Company: ${formData.companyName}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+    )}`
+    window.location.href = mailtoLink
+  }
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   return (
     <>
@@ -26,7 +44,7 @@ export default function About() {
                   style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwrtCfa-RPyNLM-pPk5xOoTDCqkkcLj3EGoVIJsBhZbpRwAVMCifhSl0Bd6zFebhK2WEz4vc5W6q7XO3GO4sw__RGPAe9T_QfF7t2T0A_Pl4pg4_gMypkKMn00QaNEMTG4qq_h1-9AlzATmwjrCRSIbAUAd6PvDVYFFaDskOuZHFbLv_1mo28IwA_QpgIyz5y2seRyU2JPw3oC5wkimkrqJrBoIxq0HzdTgdqqVfmOPYqKtZasRxmU01TKPZelO2DRN_heDQH0_sv-")' }}
                 ></div>
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl hidden md:block shadow-lg">
-                  <p className="text-3xl font-black">20+</p>
+                  <p className="text-3xl font-black">4+</p>
                   <p className="text-xs font-medium uppercase tracking-wider opacity-80">Years Excellence</p>
                 </div>
               </div>
@@ -36,7 +54,7 @@ export default function About() {
                 About Our Wholesale Mission
               </h1>
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                We are dedicated to providing the highest quality wholesale components with industry-leading shipping speeds and reliability. Our team has over 20 years of experience in global supply chain management.
+                We are dedicated to providing the highest quality wholesale components with industry-leading shipping speeds and reliability. Our team has over 4 years of experience in global supply chain management.
               </p>
               <p className="text-slate-600 dark:text-slate-400 mb-8">
                 Every partner we work with becomes part of our ecosystem. We don't just ship products; we provide the logistical backbone for your business to scale effortlessly across international borders.
@@ -84,10 +102,10 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <p className="text-5xl font-extrabold text-primary mb-2">50+</p>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">Countries Served</p>
+              <p className="text-slate-500 dark:text-slate-400 font-medium">Enterprises Served</p>
             </div>
             <div className="text-center">
-              <p className="text-5xl font-extrabold text-primary mb-2">1M+</p>
+              <p className="text-5xl font-extrabold text-primary mb-2">100K+</p>
               <p className="text-slate-500 dark:text-slate-400 font-medium">Products Delivered</p>
             </div>
             <div className="text-center">
@@ -113,7 +131,7 @@ export default function About() {
                 <p className="text-slate-500 dark:text-slate-400 mb-8">
                   Fill out the form below and our wholesale accounts team will contact you within 24 hours.
                 </p>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Company Name</label>
@@ -121,6 +139,10 @@ export default function About() {
                         className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
                         placeholder="Acme Corp"
                         type="text"
+                        name="companyName"
+                        value={formData.companyName}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="space-y-1">
@@ -129,12 +151,21 @@ export default function About() {
                         className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
                         placeholder="john@company.com"
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                   </div>
                   <div className="space-y-1">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Inquiry Subject</label>
-                    <select className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white appearance-none">
+                    <select
+                      className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white appearance-none"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                    >
                       <option>Bulk Pricing Inquiry</option>
                       <option>Custom Manufacturing</option>
                       <option>Logistics & Shipping</option>
@@ -147,6 +178,10 @@ export default function About() {
                       className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
                       placeholder="How can we help your business?"
                       rows="4"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
                     ></textarea>
                   </div>
                   <button
@@ -164,7 +199,7 @@ export default function About() {
                   For existing clients or urgent bulk quotes, reach out via our direct messaging channels.
                 </p>
                 <div className="space-y-4">
-                  <a className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-md transition-all group" href="#">
+                  <a className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-md transition-all group" href="https://chat.whatsapp.com/L4YBUVGGZ6p7hKWg4PfUGZ" target="_blank" rel="noopener noreferrer">
                     <div className="w-12 h-12 bg-[#25D366]/10 text-[#25D366] rounded-full flex items-center justify-center">
                       <span className="material-icons">chat</span>
                     </div>
