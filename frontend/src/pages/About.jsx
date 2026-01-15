@@ -4,8 +4,11 @@ import { useLocation } from 'react-router-dom'
 export default function About() {
   const location = useLocation()
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     companyName: '',
     email: '',
+    phone: '',
     subject: 'Bulk Pricing Inquiry',
     message: ''
   })
@@ -21,8 +24,12 @@ export default function About() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const name = [formData.firstName, formData.lastName].filter(Boolean).join(' ')
+    const nameSection = name ? `Name: ${name}\n` : ''
+    const phoneSection = formData.phone ? `Phone: ${formData.phone}\n` : ''
+    
     const mailtoLink = `mailto:Summit3pl@yahoo.com?subject=${encodeURIComponent(formData.subject + ' - ' + formData.companyName)}&body=${encodeURIComponent(
-      `Company: ${formData.companyName}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+      `${nameSection}Company: ${formData.companyName}\nEmail: ${formData.email}\n${phoneSection}Subject: ${formData.subject}\n\nMessage:\n${formData.message}`
     )}`
     window.location.href = mailtoLink
   }
@@ -122,6 +129,30 @@ export default function About() {
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
+                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">First Name <span className="text-slate-500 normal-case">(Optional)</span></label>
+                      <input
+                        className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
+                        placeholder="John"
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Last Name <span className="text-slate-500 normal-case">(Optional)</span></label>
+                      <input
+                        className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
+                        placeholder="Doe"
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1">
                       <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Company Name</label>
                       <input
                         className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
@@ -145,6 +176,17 @@ export default function About() {
                         required
                       />
                     </div>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Phone Number <span className="text-slate-500 normal-case">(Optional)</span></label>
+                    <input
+                      className="w-full p-3 bg-slate-50 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary/50 text-sm text-slate-900 dark:text-white"
+                      placeholder="+1 (555) 123-4567"
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="space-y-1">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Inquiry Subject</label>
