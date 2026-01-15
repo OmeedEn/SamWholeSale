@@ -28,9 +28,7 @@ export default function Home() {
               <Link to="/about#contact" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-blue-600 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
                 Contact Us <span className="material-icons">arrow_forward</span>
               </Link>
-              <Link to="/about#contact" className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
-                Request Sample Kit
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -203,9 +201,7 @@ export default function Home() {
               <Link to="/about#contact" className="px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-slate-50 transition-all shadow-xl">
                 Get Started Now
               </Link>
-              <Link to="/about#contact" className="px-8 py-4 bg-primary border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all">
-                Schedule a Demo
-              </Link>
+              
             </div>
           </div>
         </div>

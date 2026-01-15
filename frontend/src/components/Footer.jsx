@@ -7,9 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="bg-primary p-1.5 rounded-lg">
-                <span className="material-icons text-white text-xl">account_tree</span>
-              </div>
+              <img src="/SamSummit.jpg" alt="Summit Wholesale Logo" className="w-9 h-9 rounded-lg object-cover" />
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">
                 Summit Wholesale
               </span>

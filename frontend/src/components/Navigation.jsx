@@ -10,9 +10,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2">
-              <div className="bg-primary p-1.5 rounded-lg">
-                <span className="material-icons text-white text-2xl">account_tree</span>
-              </div>
+              <img src="/SamSummit.jpg" alt="Summit Wholesale Logo" className="w-10 h-10 rounded-lg object-cover" />
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">
                 Summit Wholesale
               </span>

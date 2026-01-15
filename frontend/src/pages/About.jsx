@@ -37,19 +37,7 @@ export default function About() {
       <section className="py-20 bg-white dark:bg-slate-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/2">
-              <div className="relative">
-                <div
-                  className="w-full aspect-video bg-center bg-no-repeat bg-cover rounded-2xl shadow-2xl"
-                  style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwrtCfa-RPyNLM-pPk5xOoTDCqkkcLj3EGoVIJsBhZbpRwAVMCifhSl0Bd6zFebhK2WEz4vc5W6q7XO3GO4sw__RGPAe9T_QfF7t2T0A_Pl4pg4_gMypkKMn00QaNEMTG4qq_h1-9AlzATmwjrCRSIbAUAd6PvDVYFFaDskOuZHFbLv_1mo28IwA_QpgIyz5y2seRyU2JPw3oC5wkimkrqJrBoIxq0HzdTgdqqVfmOPYqKtZasRxmU01TKPZelO2DRN_heDQH0_sv-")' }}
-                ></div>
-                <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl hidden md:block shadow-lg">
-                  <p className="text-3xl font-black">4+</p>
-                  <p className="text-xs font-medium uppercase tracking-wider opacity-80">Years Excellence</p>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
+            <div className="w-full">
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
                 About Our Wholesale Mission
               </h1>
@@ -205,16 +193,7 @@ export default function About() {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">WhatsApp Business</p>
-                      <p className="text-xs text-slate-400">Response time: ~10 mins</p>
-                    </div>
-                  </a>
-                  <a className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl hover:shadow-md transition-all group" href="#">
-                    <div className="w-12 h-12 bg-[#0088cc]/10 text-[#0088cc] rounded-full flex items-center justify-center">
-                      <span className="material-icons">send</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Telegram Channel</p>
-                      <p className="text-xs text-slate-400">Updates & inventory alerts</p>
+                      <p className="text-xs text-slate-400">Fast response time</p>
                     </div>
                   </a>
                   <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
