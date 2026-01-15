@@ -34,43 +34,43 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 bg-white dark:bg-slate-900/40">
+      <section className="py-16 md:py-20 bg-white dark:bg-slate-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            <div className="w-full animate-fade-in">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 md:mb-6 leading-tight">
                 About Our Wholesale Mission
               </h1>
-              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-4 md:mb-6">
                 We are dedicated to providing the highest quality wholesale components with industry-leading shipping speeds and reliability. Our team has over 4 years of experience in global supply chain management.
               </p>
-              <p className="text-slate-600 dark:text-slate-400 mb-8">
+              <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mb-6 md:mb-8">
                 Every partner we work with becomes part of our ecosystem. We don't just ship products; we provide the logistical backbone for your business to scale effortlessly across international borders.
               </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg text-primary">
-                    <span className="material-icons">verified</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                <div className="flex items-center gap-2 md:gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-primary/10 p-1.5 md:p-2 rounded-lg text-primary">
+                    <span className="material-icons text-lg md:text-2xl">verified</span>
                   </div>
-                  <span className="font-semibold text-sm text-slate-900 dark:text-white">Certified Quality</span>
+                  <span className="font-semibold text-xs md:text-sm text-slate-900 dark:text-white">Certified Quality</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg text-primary">
-                    <span className="material-icons">local_shipping</span>
+                <div className="flex items-center gap-2 md:gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-primary/10 p-1.5 md:p-2 rounded-lg text-primary">
+                    <span className="material-icons text-lg md:text-2xl">local_shipping</span>
                   </div>
-                  <span className="font-semibold text-sm text-slate-900 dark:text-white">Global Logistics</span>
+                  <span className="font-semibold text-xs md:text-sm text-slate-900 dark:text-white">Global Logistics</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg text-primary">
-                    <span className="material-icons">support_agent</span>
+                <div className="flex items-center gap-2 md:gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-primary/10 p-1.5 md:p-2 rounded-lg text-primary">
+                    <span className="material-icons text-lg md:text-2xl">support_agent</span>
                   </div>
-                  <span className="font-semibold text-sm text-slate-900 dark:text-white">24/7 Support</span>
+                  <span className="font-semibold text-xs md:text-sm text-slate-900 dark:text-white">24/7 Support</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg text-primary">
-                    <span className="material-icons">payments</span>
+                <div className="flex items-center gap-2 md:gap-3 hover:translate-x-1 transition-transform">
+                  <div className="bg-primary/10 p-1.5 md:p-2 rounded-lg text-primary">
+                    <span className="material-icons text-lg md:text-2xl">payments</span>
                   </div>
-                  <span className="font-semibold text-sm text-slate-900 dark:text-white">Flexible Credit</span>
+                  <span className="font-semibold text-xs md:text-sm text-slate-900 dark:text-white">Flexible Credit</span>
                 </div>
               </div>
             </div>
@@ -79,44 +79,44 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Impact in Numbers</h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3 md:mb-4">Our Impact in Numbers</h2>
+            <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Delivering excellence across the globe with measurable results
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <p className="text-5xl font-extrabold text-primary mb-2">50+</p>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">Enterprises Served</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="text-center animate-scale-in">
+              <p className="text-4xl md:text-5xl font-extrabold text-primary mb-2">50+</p>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Enterprises Served</p>
             </div>
-            <div className="text-center">
-              <p className="text-5xl font-extrabold text-primary mb-2">100K+</p>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">Products Delivered</p>
+            <div className="text-center animate-scale-in delay-100">
+              <p className="text-4xl md:text-5xl font-extrabold text-primary mb-2">100K+</p>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Products Delivered</p>
             </div>
-            <div className="text-center">
-              <p className="text-5xl font-extrabold text-primary mb-2">500+</p>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">Active Partners</p>
+            <div className="text-center animate-scale-in delay-200">
+              <p className="text-4xl md:text-5xl font-extrabold text-primary mb-2">500+</p>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Active Partners</p>
             </div>
-            <div className="text-center">
-              <p className="text-5xl font-extrabold text-primary mb-2">99%</p>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">On-Time Delivery</p>
+            <div className="text-center animate-scale-in delay-300">
+              <p className="text-4xl md:text-5xl font-extrabold text-primary mb-2">99%</p>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">On-Time Delivery</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 animate-fade-in">
             <div className="flex flex-col md:flex-row">
               {/* Contact Form */}
-              <div className="md:w-3/5 p-10 lg:p-16">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Get in Touch</h2>
-                <p className="text-slate-500 dark:text-slate-400 mb-8">
+              <div className="md:w-3/5 p-6 sm:p-8 lg:p-16">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">Get in Touch</h2>
+                <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 mb-6 md:mb-8">
                   Fill out the form below and our wholesale accounts team will contact you within 24 hours.
                 </p>
                 <form className="space-y-4" onSubmit={handleSubmit}>
